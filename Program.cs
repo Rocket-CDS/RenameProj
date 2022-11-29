@@ -58,15 +58,18 @@ if (Environment.GetCommandLineArgs().Length > 2)
                         || Path.GetExtension(f) == ".resx"
                         || Path.GetExtension(f) == ".txt"
                         || Path.GetExtension(f) == ".SqlDataProvider"
+                        || Path.GetExtension(f) == ".cshtml"
                         )
                     {
 
                         var content = FileUtils.ReadFile(f);
-                        content = content.Replace(projectName, newProjectName, false, new System.Globalization.CultureInfo("en-US"));
-                        content = content.Replace(projectName.ToLower(), newProjectName.ToLower(), false, new System.Globalization.CultureInfo("en-US"));
 
                         content = content.Replace(oldSystemKey, newSystemKey, false, new System.Globalization.CultureInfo("en-US"));
                         content = content.Replace(oldSystemKey.ToLower(), newSystemKey.ToLower(), false, new System.Globalization.CultureInfo("en-US"));
+
+                        content = content.Replace(projectName, newProjectName, false, new System.Globalization.CultureInfo("en-US"));
+                        content = content.Replace(projectName.ToLower(), newProjectName.ToLower(), false, new System.Globalization.CultureInfo("en-US"));
+
 
                         FileUtils.SaveFile(f, content);
 
