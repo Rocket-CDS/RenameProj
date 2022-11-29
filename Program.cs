@@ -105,7 +105,7 @@ else
     Console.WriteLine("<SystemKey> = The SystemKey, in the case of a RocketSystem project this will be the same as <NewProjectName>.");
     Console.WriteLine("<OldSystemKey> [OPTIONAL] = The SystemKey to be replace in the project files. default = 'RocketSystemProjectTemplate' ");
     Console.WriteLine("");
-    Console.WriteLine("IMPORTANT: You must rename the project directory name to the New Project Name.");
+    Console.WriteLine("IMPORTANT: You must rename the project directory to the New Project Name.");
     Console.WriteLine("----------------------------------------------------------");
 
 }
