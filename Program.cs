@@ -88,6 +88,7 @@ if (Environment.GetCommandLineArgs().Length > 2)
             var newProjFilesln = projectDir.TrimEnd('\\') + "\\" + newProjectName + ".sln";
             if (File.Exists(projFilesln)) File.Move(projFilesln, newProjFilesln);
 
+            //[TODO:] The resx files may have multiple languages, we should loop through them and rename as require.
             var projFileresx = projectDir.TrimEnd('\\') + "\\App_LocalResources\\" + projectName + ".resx";
             var newProjFileresx = projectDir.TrimEnd('\\') + "\\App_LocalResources\\" + newProjectName + ".resx";
             if (File.Exists(projFileresx)) File.Move(projFileresx, newProjFileresx);
