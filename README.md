@@ -1,6 +1,6 @@
 # RenameProj
 
-**IMPORTANT: You must rename the project directory name to the New Project Name.");**
+**IMPORTANT: You must rename the project directory to the New Project Name.**
 
 RenameProj.exe <ProjectDirectory> <SystemKey> <OldSystemKey>");  
 
