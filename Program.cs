@@ -44,6 +44,8 @@ if (Environment.GetCommandLineArgs().Length > 2)
             eo.RecurseSubdirectories = true;
             foreach (var f in Directory.GetFiles(projectDir, "*.*", eo))
             {
+                if (!f.StartsWith(projectDir.TrimEnd('\\') + "\\packages\\") && !f.StartsWith(projectDir.TrimEnd('\\') + "\\bin\\") && !f.StartsWith(projectDir.TrimEnd('\\') + "\\obj\\"))
+                {
                 if (!f.StartsWith(projectDir + "obj") && !f.StartsWith(projectDir + "bin"))
                 {
                     if (Path.GetExtension(f) == ".cs"
@@ -76,6 +78,7 @@ if (Environment.GetCommandLineArgs().Length > 2)
                         Console.WriteLine(f);
 
                     }
+                }
                 }
             }
             // Rename Files
