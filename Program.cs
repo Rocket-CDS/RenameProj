@@ -4,11 +4,12 @@ using System.Text;
 
 if (Environment.GetCommandLineArgs().Length > 2)
 {
-    var newSystemKey = "";
     var oldSystemKey = "RocketSystemProjectTemplate";
 
     string projectDir = Environment.GetCommandLineArgs()[1];
     var newProjectName = new DirectoryInfo(projectDir).Name;
+    var newSystemKey = newProjectName;
+
     if (Environment.GetCommandLineArgs().Length > 2) newSystemKey = Environment.GetCommandLineArgs()[2];
     if (Environment.GetCommandLineArgs().Length > 3) oldSystemKey = Environment.GetCommandLineArgs()[3];
 
