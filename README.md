@@ -21,6 +21,6 @@ Example of plugin..
 RenameProj.exe D:\Nevoweb\Projects\DesktopModules\DNNrocketModules\RocketIntraSqlReports rocketintra
 ```
 
-**NOTE: The new Project Name is taken from the Directory name.  This is used as the namespace root.**
+**NOTE: The new Project Name is taken from the Directory name.  This is used as the namespace root.**  
 **IMPORTANT: This currently only works well with the Rocket project templates, start again if you make a mistake.**
 
