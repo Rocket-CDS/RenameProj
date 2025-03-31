@@ -95,8 +95,8 @@ if (Environment.GetCommandLineArgs().Length > 2)
             var newProjFilesln = projectDir.TrimEnd('\\') + "\\" + newProjectName + ".sln";
             if (File.Exists(projFilesln)) File.Move(projFilesln, newProjFilesln);
 
-            var projFileToken = projectDir.TrimEnd('\\') + "\\" + projectName + "Tokens.cs";
-            var newProjFileToken = projectDir.TrimEnd('\\') + "\\" + newProjectName + "Tokens.cs";
+            var projFileToken = projectDir.TrimEnd('\\') + "\\Render\\" + projectName + "Tokens.cs";
+            var newProjFileToken = projectDir.TrimEnd('\\') + "\\Render\\" + newProjectName + "Tokens.cs";
             if (File.Exists(projFileToken)) File.Move(projFileToken, newProjFileToken);
 
             //[TODO:] The resx files may have multiple languages, we should loop through them and rename as require.
